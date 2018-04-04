@@ -10,5 +10,19 @@
     };
   };
 
-  exports.expect = expect;
+  this.describe = function(description, callBack) {
+    return true;
+  };
+
+  this.it = function(description, callBack) {
+    return true;
+  }
+
+  exports = {
+    expect: expect,
+    describe: describe,
+    it: it,
+  }
 })(this);
+
+expect(1).toEqual(1)
