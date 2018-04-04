@@ -6,6 +6,9 @@
       },
       toBeEmpty: function() {
         return thing == null;
+      },
+      toMatchEmptyArray: function(array) {
+        return array instanceof Array;
       }
     };
   };
