@@ -1,8 +1,14 @@
-var expect = {
-  toEqual: function(assertionToCheck) {
-    if (!assertionToCheck) {
-      throw new Error("Assertion failed: " + assertionToCheck + " is not truthy");
-    }
-    document.write('works!')
-  }
-};
+(function(exports) {
+  this.expect = function(thing) {
+    return {
+      toEqual: function(value) {
+        return value === thing;
+      },
+      toBeEmpty: function() {
+        return thing == null;
+      }
+    };
+  };
+
+  exports.expect = expect;
+})(this);
