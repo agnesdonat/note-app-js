@@ -5,7 +5,7 @@
 
     console.log('has an empty notes array -', expect(list._list).toMatchEmptyArray([]));
 
-    list.add(note);
+    list.insert(note);
 
     console.log('has a new note in the array -', expect(list.inspectNotes()[0]).toEqual(note));
   };
